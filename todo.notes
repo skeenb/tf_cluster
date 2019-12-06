@@ -1,0 +1,14 @@
+---------------------------
+GOAL
+---------------------------
+1. Have docker spin up 3 containers.
+	- 2 tomcat 
+	- 1 load balancer
+2. fault tolerent lb
+3. round robin lb
+4. round robin with tolerence?
+
+----------------------------
+Dec 5
+----------------------------
+1. I left off on the webpage below. AUFS should work on the bootable drive from what I am reading in the docker docks.
