@@ -3,16 +3,16 @@
   
 
 # sets up everything related to tomcat
-sudo useradd -s /bin/false -g tomcat -d /opt/tomcat tomcat
-sudo mv /tmp/apache* /opt/tomcat/
-sudo ln -s /opt/tomcat/apache-tomcat-9.0.27 /opt/tomcat/latest
-sudo chown -RH tomcat: /opt/tomcat/latest 
-sudo sh -c 'chmod +x /opt/tomcat/latest/bin/*.sh'
-sudo cp /tmp/tomcat.service /etc/systemd/system/tomcat.service
-sudo systemctl enable tomcat
-sudo systemctl start tomcat
+useradd -s /bin/false -g tomcat -d /opt/tomcat tomcat
+mv /tmp/apache* /opt/tomcat/
+ln -s /opt/tomcat/apache-tomcat-9.0.27 /opt/tomcat/latest
+chown -RH tomcat: /opt/tomcat/latest 
+sh -c 'chmod +x /opt/tomcat/latest/bin/*.sh'
+cp /tmp/tomcat.service /etc/systemd/system/tomcat.service
+systemctl enable tomcat
+systemctl start tomcat
 # firewall stuff below for tomcat
-sudo ufw allow 8080/tcp
+ufw allow 8080/tcp
 
 
 while true; do 
@@ -20,4 +20,4 @@ while true; do
 done
 
 
-# sudo ufw allow 8080/tcp
+# ufw allow 8080/tcp
