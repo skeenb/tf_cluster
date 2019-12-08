@@ -1,8 +1,9 @@
 #!/bin/bash
-
-docker build -t tomcat9server .
-docker run --security-opt="label=user:root" \
-	--volume='pwd':/root/tf_cluster \
-	tomcat9server 
+echo "about to start building apache web tomcat9server"
+docker build -t apache2server .
+echo "docker image has been created"
+echo "about to run docker"
+docker run -d -p 80:80 apache2server 
+echo "ran docker"
 
 
